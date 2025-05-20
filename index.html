@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Bike Trail Tirol Beispiel</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Leaflet providers -->
+    <script src="https://unpkg.com/leaflet-providers@latest/leaflet-providers.js"></script>
+
+    <!-- eigene Stile und Hauptskript -->
+    <link rel="stylesheet" href="main.css">
+    <script defer src="main.js"></script>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h2><i class="fa-solid fa-person-biking"></i> Bike Trail Tirol Beispiel</h2>
+            <nav>
+                <i class="fab fa-github"></i> <a href="https://github.com/webmapping/biketirol">Github</a>
+            </nav>
+        </header>
+        <article>
+            <h1>Etappe 20: Ischgl - St. Anton</h1>
+            <p>Auf dieser 35 Kilometer langen Strecke fahren Sie ausschließlich auf Asphaltwegen und überwinden dabei 750 Höhenmeter, wobei mit dem Arlbergpass die höchste Steigung gleich zu Beginn auf Sie wartet. Begleitet werden Sie auf dieser Etappe von schönen Panoramen und stets neuen Einblicken.</p>
+
+            <div class="summary">
+                <div class="summary-badge" title="Fahrzeit">
+                    <i class="fa-regular fa-clock"></i> 6:00
+                </div>
+                <div class="summary-badge" title="Länge">
+                    <i class="fa-solid fa-ruler-horizontal"></i> 41,8 km
+                </div>
+                <div class="summary-badge" title="Höhenmeter bergauf">
+                    <i class="fa-solid fa-up-long"></i> 1290 m
+                </div>
+                <div class="summary-badge" title="Höhenmeter bergab">
+                    <i class="fa-solid fa-down-long"></i> 1200 m
+                </div>
+                <div class="summary-badge" title="höchster Punkt">
+                    <i class="fa-solid fa-arrows-up-to-line"></i> 2300 m
+                </div>
+                <div class="summary-badge" title="tiefster Punkt">
+                    <i class="fa-solid fa-arrows-down-to-line"></i> 1380 m
+                </div>
+                <div class="summary-badge" title="Schwierigkeitsgrad">
+                    <i class="fa-solid fa-heart-pulse"></i> schwer
+                </div>
+                <div class="summary-badge" title="Download">
+                    <i class="fa-solid fa-download"></i> <a href="https://www.wildganz.com/radfernweg-aut/bike-trail-tirol-etappe-32">Download GPX</a>
+                </div>
+            </div>
+
+            <div id="map"></div>
+
+            <h3>Streckenbeschreibung</h3>
+            <p>Am westlichen Ortsende von Ischgl wechselt man über die Brücke auf den Talwanderweg und bleibt auf diesem bis zum Weiler Mathon. Hier wiederum zweigt man am westlichen Ortsende links ab („Galtür“). Den Wegweisern bis nach Galtür folgen. Auf Höhe des Zentrums, aber auf der nördlichen Bachseite, zweigt man rechts auf den Paznauner Talweg ab. Die Strecke wird nun merklich steiler und man erreicht in weiterer Folge die Landesgrenze zu Vorarlberg am Zeinisjoch (2 Stunden ab Ischgl). Nun radelt man vorbei am Kops Stausee und orientiert sich nach einer kurzen Abfahrt hinter dem See an den Wegweisern „Heilbronner Hütte“. Der Fahrweg steigt nun wieder an und es geht vorbei an der Verbella Alpe bis man die schon lange gut sichtbare Heilbronner Hütte (2.320 Meter) erreicht (2 Stunden  ab dem Zeinisjoch). Kurz danach bei den Scheidseen beginnt eine etwa 3 Kilometer lange Schiebestrecke hinab ins Schönverwalltal. Nun geht es immer dem Forstweg talauswärts entlang, vorbei an der Abzweigung zur Konstanzer Hütte bis zur Abzweigung bei der Salzhütte, wo man den Bach auf die rechte Seite überquert. Nun fährt man einen guten Kilometer am Verwall Stausee entlang, ehe man wieder links zum Rasthaus Verwall und zur asphaltierten Talstraße abzweigt. Auf dieser bleibt man bis man das Ziel bei der Kreuzung zur Arlberg Bundesstraße erreicht (2 Stunden ab der Heilbronner Hütte).</p>
+
+        </article>
+        <footer>
+            <strong>Datenquellen:</strong>
+            <nav>
+                <a href="https://www.stephanpumpernik.github.io/biketirol">Etappe 20: Ischgl - St. Anton</a>
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_biketrailtirol">Opendata Bike Trail Tirol</a> |
+                <a href="https://www.data.gv.at/katalog/de/dataset/land-tirol_elektronischekartetirol">eGrundkarte Tirol</a>
+            </nav>
+        </footer>
+    </main>
+</body>
+
+</html>
