@@ -74,5 +74,16 @@ pulldown.onchange = function(evt) {
     window.location.href = `https://${evt.target.value}.github.io/biketirol`;
 }
 
-const controlElevation = L.control.elevation({}).addTo(map);
+const controlElevation = L.control.elevation({
+    theme: "bike-tirol",
+    time: false,
+    elevationDiv: "#profile",
+    height: 300,
+    slope: true,
+}).addTo(map);
 controlElevation.load("data/etappe30.gpx");
+
+var gkTirol = new L.TileLayer("https://wmts.kartetirol.at/gdi_summer/{z}/{x}/{y}.png");
+var miniMap = new L.Control.MiniMap(gkTirol, {
+    toggleDisplay: true
+}).addTo(map);
